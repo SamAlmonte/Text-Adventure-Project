@@ -21,8 +21,13 @@ public class Player {
      * inform the user that the name has been changed by saying "Your name is now {name}".
      * @param newName - the player's name that will be saved
      */
-    public void setName(String newName) {
 
+    private String name;
+
+
+    public void setName(String newName) {
+        name = newName;
+        System.out.printf("Your name is now %s\n", newName);
     }
 
     /**
@@ -32,7 +37,7 @@ public class Player {
      * @return The name of the player
      */
     public String getName() {
-        return "";
+        return name;
     }
 
     /**
@@ -42,10 +47,10 @@ public class Player {
      * @return true if the player's level is enough to open the door.
      */
     public boolean canOpenDoor() {
+        if((level/2.0)> 2)
+            return true;
         return false;
     }
-
-
 
 
 
