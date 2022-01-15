@@ -4,6 +4,7 @@ import main.com.adventure.settings.Command;
 import main.com.adventure.settings.CommandConstants;
 
 import java.util.Locale;
+import java.util.Scanner;
 
 public class GameInputProcessor {
 
@@ -13,7 +14,17 @@ public class GameInputProcessor {
      */
     public String prompt() {
         System.out.println("Enter your next command:");
-        return "";
+        Scanner aScanner = new Scanner(System.in);
+        String userResponse;
+        /*
+        int i = userResponse.indexOf(' ');
+        if(i != -1) {
+            userResponse = userResponse.substring(0, i);
+            return userResponse;
+        }
+
+         */
+        return userResponse = aScanner.nextLine();
     }
 
     /**
@@ -29,7 +40,9 @@ public class GameInputProcessor {
      * @return - the Command object with the proper verb and blank object
      */
     private Command buildSimpleCommand(String input) {
-        return new Command("");
+        int i = input.indexOf(' ');
+        String verb = input.substring(0, i);
+        return new Command(verb);
     }
 
     /**
@@ -52,7 +65,18 @@ public class GameInputProcessor {
      * @return - the Command object with the proper verb and object
      */
     private Command buildCommandWithObject(String input) {
-        return new Command("", "");
+        int i = input.indexOf(' ');
+        String object;
+        String verb;
+        if(i < 0) { //if there is no 'space in the sentence
+            return new Command(input, ""); //just throw input into command function
+        }
+        else {
+            verb = input.substring(0, i);
+            object = input.substring(i + 1); //else, break up the input String
+            object = object.trim();
+        }
+        return new Command(verb,  object); //return the spliced string method
     }
 
 

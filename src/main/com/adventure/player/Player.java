@@ -73,7 +73,19 @@ public class Player {
      * @return true if the move is executed. Otherwise, false.
      */
     public boolean move(String direction, boolean isValidDirection) {
-        return true;
+        if(!isValidDirection){
+            System.out.printf("%s is not a valid direction\n", direction);
+            return false;
+        } else {
+            if (direction.equalsIgnoreCase("east")) {
+                ++currentLocationIndex;
+                return true;
+            } else if (direction.equalsIgnoreCase("west")) {
+                --currentLocationIndex;
+                return true;
+            }
+        }
+        return false;
     }
 
     /**
