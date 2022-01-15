@@ -74,11 +74,11 @@ main/com/adventure/world/objects/doors/Door.java
  main.com.adventure.world.objects.doors.Door
 main/com/adventure/world/objects/keys/OmniKey.java
  main.com.adventure.world.objects.keys.OmniKey
-main/com/adventure/player/Player.java
- main.com.adventure.player.Player
-main/com/adventure/CombatController.java
- main.com.adventure.CombatController
 main/com/adventure/GameInputProcessor.java
  main.com.adventure.GameInputProcessor
 main/com/adventure/settings/GameController.java
  main.com.adventure.settings.GameController
+main/com/adventure/CombatController.java
+ main.com.adventure.CombatController
+main/com/adventure/player/Player.java
+ main.com.adventure.player.Player

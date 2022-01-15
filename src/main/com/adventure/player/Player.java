@@ -23,7 +23,10 @@ public class Player {
      */
 
     private String name;
-
+    /**
+    Sets the name of the player to whatever value contain in the variable.
+     @param newName the player's name that will be saveds
+      */
 
     public void setName(String newName) {
         name = newName;
@@ -45,10 +48,11 @@ public class Player {
      * The canOpenDoor is calculated by taking the player's level and dividing it by 2.
      * If the result is greater than 2, the player can open doors.
      * @return true if the player's level is enough to open the door.
-     */
+      */
     public boolean canOpenDoor() {
-        if((level/2.0)> 2)
+        if ((level / 2.0) > 2) {
             return true;
+        }
         return false;
     }
 
@@ -73,7 +77,7 @@ public class Player {
      * @return true if the move is executed. Otherwise, false.
      */
     public boolean move(String direction, boolean isValidDirection) {
-        if(!isValidDirection){
+        if (!isValidDirection) {
             System.out.printf("%s is not a valid direction\n", direction);
             return false;
         } else {

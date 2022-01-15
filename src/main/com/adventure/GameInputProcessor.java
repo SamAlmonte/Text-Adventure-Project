@@ -15,7 +15,7 @@ public class GameInputProcessor {
     public String prompt() {
         System.out.println("Enter your next command:");
         Scanner aScanner = new Scanner(System.in);
-        String userResponse;
+        String userResponse = aScanner.nextLine();
         /*
         int i = userResponse.indexOf(' ');
         if(i != -1) {
@@ -24,7 +24,7 @@ public class GameInputProcessor {
         }
 
          */
-        return userResponse = aScanner.nextLine();
+        return userResponse;
     }
 
     /**
@@ -68,15 +68,16 @@ public class GameInputProcessor {
         int i = input.indexOf(' ');
         String object;
         String verb;
-        if(i < 0) { //if there is no 'space in the sentence
-            return new Command(input, ""); //just throw input into command function
-        }
-        else {
+        //if there is no 'space in the sentence
+        if (i < 0) {
+            return new Command(input, "");
+        } else {
             verb = input.substring(0, i);
-            object = input.substring(i + 1); //else, break up the input String
+            object = input.substring(i + 1);
             object = object.trim();
         }
-        return new Command(verb,  object); //return the spliced string method
+        //return the spliced string method
+        return new Command(verb,  object);
     }
 
 
