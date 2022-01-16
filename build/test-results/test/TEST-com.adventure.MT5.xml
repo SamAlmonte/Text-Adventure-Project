@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.adventure.MT5" tests="2" skipped="0" failures="0" errors="0" timestamp="2022-01-16T01:55:49" hostname="sam-tobefilledbyoem" time="0.041">
+  <properties/>
+  <testcase name="testScene()" classname="com.adventure.MT5" time="0.039"/>
+  <testcase name="testHole()" classname="com.adventure.MT5" time="0.002"/>
+  <system-out><![CDATA[Door is now open
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
