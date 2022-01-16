@@ -26,7 +26,10 @@ public enum CommandVerb {
      * @return - the CommandVerb associated with the given input.
      */
     public static CommandVerb getVerb(String verbString) {
-        return INVALID;
+        if (CommandVerb.valueOf(verbString.toUpperCase()) != null) {
+            return CommandVerb.valueOf(verbString.toUpperCase());
+        }
+        return CommandVerb.INVALID;
     }
 
 }

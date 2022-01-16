@@ -2,6 +2,7 @@ package main.com.adventure;
 
 import main.com.adventure.settings.Command;
 import main.com.adventure.settings.CommandConstants;
+import main.com.adventure.settings.CommandVerb;
 
 import java.util.Locale;
 import java.util.Scanner;
@@ -41,8 +42,11 @@ public class GameInputProcessor {
      */
     private Command buildSimpleCommand(String input) {
         int i = input.indexOf(' ');
-        String verb = input.substring(0, i);
-        return new Command(verb);
+        if (i >= 0) {
+            String verb = input.substring(0, i);
+            return new Command(CommandVerb.getVerb(verb));
+        }
+        return new Command(CommandVerb.getVerb(input));
     }
 
     /**
@@ -70,14 +74,14 @@ public class GameInputProcessor {
         String verb;
         //if there is no 'space in the sentence
         if (i < 0) {
-            return new Command(input, "");
+            return new Command(CommandVerb.getVerb(input), "");
         } else {
             verb = input.substring(0, i);
             object = input.substring(i + 1);
             object = object.trim();
         }
         //return the spliced string method
-        return new Command(verb,  object);
+        return new Command(CommandVerb.getVerb(verb),  object);
     }
 
 
