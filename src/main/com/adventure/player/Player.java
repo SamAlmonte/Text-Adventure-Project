@@ -49,6 +49,7 @@ public class Player {
      * If the result is greater than 2, the player can open doors.
      * @return true if the player's level is enough to open the door.
       */
+
     public boolean canOpenDoor() {
         if ((level / 2.0) > 2) {
             return true;
@@ -100,6 +101,9 @@ public class Player {
      */
     public void setWeapon(Weapon item) {
         //TODO Complete this function in Sprint 3 Module 2
+        if (item.getPower() != getPower()) {
+            power = item.getPower();
+        }
     }
 
     /**

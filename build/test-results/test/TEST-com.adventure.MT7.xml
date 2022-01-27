@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.adventure.MT7" tests="3" skipped="0" failures="0" errors="0" timestamp="2022-01-27T05:44:54" hostname="sam-tobefilledbyoem" time="0.085">
+  <properties/>
+  <testcase name="testReadFile2()" classname="com.adventure.MT7" time="0.06"/>
+  <testcase name="testReadFile()" classname="com.adventure.MT7" time="0.002"/>
+  <testcase name="testCombatSimulator()" classname="com.adventure.MT7" time="0.021"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
