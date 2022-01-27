@@ -74,14 +74,14 @@ main/com/adventure/world/objects/doors/DoorFactory.java
  main.com.adventure.world.objects.doors.DoorFactory
 main/com/adventure/player/Player.java
  main.com.adventure.player.Player
-main/com/adventure/CombatController.java
- main.com.adventure.CombatController
-main/com/adventure/settings/GameController.java
- main.com.adventure.settings.GameController
- main.com.adventure.settings.GameController$1
-main/com/adventure/world/scenes/SceneDescriptionFileReader.java
- main.com.adventure.world.scenes.SceneDescriptionFileReader
 main/com/adventure/world/scenes/s3_m2/MonsterScene.java
  main.com.adventure.world.scenes.s3_m2.MonsterScene
 main/com/adventure/world/scenes/s3_m2/MonsterSwordScene.java
  main.com.adventure.world.scenes.s3_m2.MonsterSwordScene
+main/com/adventure/world/scenes/SceneDescriptionFileReader.java
+ main.com.adventure.world.scenes.SceneDescriptionFileReader
+main/com/adventure/settings/GameController.java
+ main.com.adventure.settings.GameController
+ main.com.adventure.settings.GameController$1
+main/com/adventure/CombatController.java
+ main.com.adventure.CombatController

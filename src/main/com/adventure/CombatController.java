@@ -29,9 +29,6 @@ public class CombatController {
                 break;
             }
             player.setHealth(player.getHealth() - monster.getPower());
-            if (player.getHealth() <= 0) {
-                break;
-            }
         }
     }
 
