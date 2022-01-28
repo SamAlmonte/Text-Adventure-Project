@@ -1,5 +1,4 @@
 package main.com.adventure.player;
-
 import main.com.adventure.world.objects.Tangible;
 
 /**
@@ -18,7 +17,16 @@ public class Backpack {
      */
     public boolean addItem(Tangible item) {
         //TODO Complete the function
-        return false;
+        boolean success = false;
+        for (int i = 0; i < MAX_CAPACITY; i++) {
+            if (items[i] == null) {
+                items[i] = item;
+                success = true;
+                break;
+            }
+        }
+
+        return success;
     }
 
     /**
@@ -28,6 +36,13 @@ public class Backpack {
      */
     public Tangible getItem(String name) {
         //TODO Complete the function
+        for (int i = 0; i < MAX_CAPACITY; i++) {
+            if (items[i] != null) {
+                if (items[i].getName().equals(name)) {
+                    return items[i];
+                }
+            }
+        }
         return null;
     }
 
@@ -37,8 +52,17 @@ public class Backpack {
      * @return - true if the item was removed. Otherwise, false.
      */
     public boolean removeItem(Tangible item) {
-        //TODO Complete the function
-        return false;
+        boolean success = false;
+        for (int i = 0; i < MAX_CAPACITY; i++) {
+            if (items[i] != null) {
+                if (items[i].getName().equals(item.getName())) {
+                    items[i] = null;
+                    success = true;
+                    break;
+                }
+            }
+        }
+        return success;
     }
 
     /**
@@ -51,5 +75,9 @@ public class Backpack {
      */
     public void printItems() {
         //TODO Complete the function
+        System.out.println("Here are the items in your backpack:");
+        for (Tangible aItem : items) {
+            System.out.printf(" - %s", aItem);
+        }
     }
 }
