@@ -28,7 +28,14 @@ public class OmniKey implements Tangible {
     public void useItem(Tangible door) {
         if (door instanceof OmniDoor) {
             //TODO Complete the function
-            System.out.println("Your solution goes here");
+            //System.out.println("Your solution goes here");
+            while (((OmniDoor) door).getFirstWrongPin(this) != -1) {
+                int indexOfNextWrong = ((OmniDoor) door).getFirstWrongPin(this);
+                pins[indexOfNextWrong] = !pins[indexOfNextWrong];
+
+            }
+        } else {
+            System.out.println("This key can only be used with an OmniDoor.");
         }
     }
 
